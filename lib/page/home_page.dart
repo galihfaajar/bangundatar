@@ -35,13 +35,7 @@ class HomePage extends StatelessWidget {
           Row(
             children: [
               CustomMenu(imageAsset:"assets/lingkaran.jpg", title: "Lingkaran"),
-
-            ],
-          ),
-          Row(
-            children: [
-              CustomMenu(imageAsset:"assets/lingkaran.jpg", title: "Lingkaran"),
-
+              CustomMenu(imageAsset:"assets/segitiga.jpg", title: "Segitiga"),
             ],
           ),
           Row(
