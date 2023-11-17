@@ -40,7 +40,7 @@ class PersegiPage extends StatelessWidget {
                   filled: true,
                   labelText: "Sisi",
                   hintText: "Masukkan Sisi",
-                  hintStyle: TextStyle(color: Colors.grey.shade400),
+                  hintStyle: TextStyle(color: Colors.blue),
                   contentPadding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                   border: OutlineInputBorder(
                       borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -54,16 +54,19 @@ class PersegiPage extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: ElevatedButton(onPressed: (){
                   _persegiController.hitungluas();
                 },
-                child: Text("Hitung Luas"),
+                child: Text("Hitung Luas",
+                  style: TextStyle(color: Colors.black),
+                ),
                   style: ButtonStyle(
                     backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.green),
+                      MaterialStateProperty.all<Color>(Colors.blue),
                   ),
                 ),
               ),
@@ -72,7 +75,9 @@ class PersegiPage extends StatelessWidget {
                 child: ElevatedButton(onPressed: (){
                   _persegiController.hitungkeliling();
                 },
-                    child: Text("Hitung Keliling"),
+                child: Text("Hitung Keliling",
+                  style: TextStyle(color: Colors.black),
+                ),
                   style: ButtonStyle(
                     backgroundColor:
                     MaterialStateProperty.all<Color>(Colors.green),
@@ -81,8 +86,7 @@ class PersegiPage extends StatelessWidget {
               ),
             ],
           ),
-
-          Obx(() => Text(_persegiController.hasil.value)),
+          Obx(() => Text(_persegiController.hasil.value, style: TextStyle(color: _persegiController.color.value),)),
         ],
       ),
     );

@@ -31,10 +31,16 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             children: [
-              CustomMenu(imageAsset:"assets/lingkaran.jpg", title: "Lingkaran"),
-              CustomMenu(imageAsset:"assets/segitiga.jpg", title: "Segitiga"),
+              Expanded(child: CustomMenu(imageAsset:"assets/lingkaran.jpg", title: "Lingkaran")),
+              Expanded(child: CustomMenu(imageAsset:"assets/segitiga.jpg", title: "Segitiga")),
             ],
           ),
+          Text(
+           "Galih Fajar Nugroho",
+            style: TextStyle(
+              color: Colors.green,
+            ),
+          )
         ],
       ),
     );
